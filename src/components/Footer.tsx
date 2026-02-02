@@ -27,7 +27,7 @@ export default function Footer() {
                             <a href="https://www.facebook.com/profile.php?id=61587277895805&sk=about_details" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
                                 <Facebook size={20} />
                             </a>
-                            <a href="https://www.instagram.com/ajmeraaconstruction/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
+                            <a href="https://www.instagram.com/ajmeraaconstructionpvtltd/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
                                 <Instagram size={20} />
                             </a>
                             <a href="https://x.com/AjmeraCons89012" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
