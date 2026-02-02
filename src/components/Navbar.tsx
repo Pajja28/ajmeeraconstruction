@@ -39,7 +39,7 @@ export default function Navbar() {
         { name: "Projects", href: "/#projects" },
         { name: "Packages", href: "/#packages" },
         { name: "Machinery", href: "/#machinery" },
-        { name: "Contact", href: "/#contact" },
+        { name: "Contact", href: "/contact" },
     ];
 
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -115,7 +115,7 @@ export default function Navbar() {
                         </div>
                     ))}
                     <Link
-                        href="/#contact"
+                        href="/contact"
                         className={cn(
                             "hidden lg:inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold transition-all rounded-full focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2",
                             isScrolled
@@ -172,7 +172,7 @@ export default function Navbar() {
                         </div>
                     ))}
                     <Link
-                        href="/#contact"
+                        href="/contact"
                         className="w-full text-center px-6 py-3 text-base font-semibold text-white bg-primary rounded-lg hover:bg-red-700"
                         onClick={() => setIsMobileMenuOpen(false)}
                     >

@@ -110,13 +110,15 @@ export default function Contact() {
                         {/* Director 1: Asgar Ali */}
                         <div className="bg-white/5 backdrop-blur-md p-6 rounded-xl shadow-lg border border-white/10 flex flex-col items-center gap-4 text-center hover:bg-white/10 transition-colors group">
                             <div className="w-40 h-48 shrink-0 overflow-hidden rounded-lg shadow-sm">
-                                <img
+                                <Image
                                     src="/images/asgar-ali.jpg"
                                     alt="Mr. Asgar Ali"
+                                    width={160}
+                                    height={192}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                    onError={(e) => {
-                                        (e.target as HTMLImageElement).style.display = 'none';
-                                        (e.target as HTMLImageElement).nextElementSibling!.classList.remove('hidden');
+                                    onError={(e: any) => {
+                                        e.target.style.display = 'none';
+                                        e.target.nextElementSibling!.classList.remove('hidden');
                                     }}
                                 />
                                 <div className="w-full h-full bg-gray-700 flex items-center justify-center hidden">
@@ -135,13 +137,15 @@ export default function Contact() {
                         {/* Director 2: Hayat Alam */}
                         <div className="bg-white/5 backdrop-blur-md p-6 rounded-xl shadow-lg border border-white/10 flex flex-col items-center gap-4 text-center hover:bg-white/10 transition-colors group">
                             <div className="w-40 h-48 shrink-0 overflow-hidden rounded-lg shadow-sm">
-                                <img
+                                <Image
                                     src="/images/hayat-alam.jpg"
                                     alt="Mr. Hayat Alam"
+                                    width={160}
+                                    height={192}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                    onError={(e) => {
-                                        (e.target as HTMLImageElement).style.display = 'none';
-                                        (e.target as HTMLImageElement).nextElementSibling!.classList.remove('hidden');
+                                    onError={(e: any) => {
+                                        e.target.style.display = 'none';
+                                        e.target.nextElementSibling!.classList.remove('hidden');
                                     }}
                                 />
                                 <div className="w-full h-full bg-gray-700 flex items-center justify-center hidden">
@@ -160,13 +164,15 @@ export default function Contact() {
                         {/* Operations Head */}
                         <div className="bg-white/5 backdrop-blur-md p-6 rounded-xl shadow-lg border border-white/10 flex flex-col items-center gap-4 text-center hover:bg-white/10 transition-colors group">
                             <div className="w-40 h-48 shrink-0 overflow-hidden rounded-lg shadow-sm bg-white/10 flex items-center justify-center p-1">
-                                <img
+                                <Image
                                     src="/images/somashekar-ks.png"
                                     alt="Somashekar KS"
+                                    width={160}
+                                    height={192}
                                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                                    onError={(e) => {
-                                        (e.target as HTMLImageElement).style.display = 'none';
-                                        (e.target as HTMLImageElement).nextElementSibling!.classList.remove('hidden');
+                                    onError={(e: any) => {
+                                        e.target.style.display = 'none';
+                                        e.target.nextElementSibling!.classList.remove('hidden');
                                     }}
                                 />
                                 <div className="w-full h-full bg-gray-700 flex items-center justify-center hidden">

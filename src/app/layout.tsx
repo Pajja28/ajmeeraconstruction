@@ -8,17 +8,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ajmeraa Construction | Bengaluru's Construction Excellence",
+  title: "Ajmeraa Constructions Private Ltd | Bengaluru's Construction Excellence",
   description: "Leading construction company in Bengaluru specializing in premium Residential, Commercial, and Infrastructure projects. Trust, transparency, and quality guaranteed.",
   keywords: ["Construction", "Bengaluru", "Builders", "Residential", "Commercial", "Infrastructure", "Ajmeraa", "Real Estate"],
   openGraph: {
     title: "Ajmeraa Construction | Building Dreams",
     description: "Specializing in Residential, Commercial, and Infrastructure projects with a focus on trust and transparency.",
-    url: "https://ajmeraconstruction.com",
+    url: "https://ajmeraaconstruction.org",
     siteName: "Ajmeraa Construction",
     images: [
       {
-        url: "/images/og-image.jpg", // We might not have this, but good to have the tag structure
+        url: "/images/logo.png",
         width: 1200,
         height: 630,
       },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-  metadataBase: new URL('https://ajmeraconstruction.com'),
+  metadataBase: new URL('https://ajmeraaconstruction.org'),
 };
 
 import Navbar from "@/components/Navbar";
@@ -36,10 +36,55 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "Ajmeraa Constructions Private Ltd",
+    "image": "https://ajmeraaconstruction.org/images/logo.png",
+    "url": "https://ajmeraaconstruction.org",
+    "telephone": "+917795840938",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "SLV Complex, Kattigenahalli",
+      "addressLocality": "Bengaluru",
+      "postalCode": "560063",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+917795840938",
+      "contactType": "customer service",
+      "areaServed": "IN",
+      "availableLanguage": ["en", "kn", "hi"]
+    },
+    // "geo": {
+    //   "@type": "GeoCoordinates",
+    //   "latitude": 12.9716, // Approximate, update if known
+    //   "longitude": 77.5946
+    // },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  };
+
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased bg-white text-dark-slate`}>
         <Navbar />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
