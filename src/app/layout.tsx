@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   description: "Leading construction company in Bengaluru specializing in premium Residential, Commercial, and Infrastructure projects. Trust, transparency, and quality guaranteed.",
   keywords: ["Construction", "Bengaluru", "Builders", "Residential", "Commercial", "Infrastructure", "Ajmeraa", "Real Estate"],
   icons: {
-    icon: "/favicon.ico",
-    apple: "/images/logo.png", // Fallback to logo for high-res icon
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
   },
   openGraph: {
     title: "Ajmeraa Construction | Building Dreams",
