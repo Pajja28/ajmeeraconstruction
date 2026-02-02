@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Target, Eye, ShieldCheck, Users } from "lucide-react";
@@ -38,13 +39,29 @@ export default function About() {
     ];
 
     return (
-        <section id="about" className="py-20 bg-white">
-            <div className="container px-4 md:px-6 mx-auto">
+        <section id="about" className="py-20 bg-dark-slate relative overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/bg-about.png"
+                    alt="About Background"
+                    fill
+                    className="object-cover"
+                    quality={90}
+                    priority={false}
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-dark-slate/85 via-dark-slate/70 to-dark-slate/50" />
+                {/* Top and Bottom Fades for smooth transition */}
+                <div className="absolute top-0 left-0 right-0 h-40 md:h-64 bg-gradient-to-b from-dark-slate via-dark-slate/80 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-40 md:h-64 bg-gradient-to-t from-dark-slate via-dark-slate/80 to-transparent" />
+            </div>
+
+            <div className="container relative z-10 px-4 md:px-6 mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-dark-slate mb-4">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                         Who <span className="text-primary">We Are</span>
                     </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-gray-300 max-w-2xl mx-auto">
                         We are more than just a construction company; we are partners in building your dreams. Explore our story and values below.
                     </p>
                 </div>

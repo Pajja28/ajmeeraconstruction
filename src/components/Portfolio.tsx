@@ -1,34 +1,35 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 const projects = [
     {
-        title: "Commercial Complex",
-        category: "Commercial",
-        image: "/slideshow/7.jpeg",
-        description: "State-of-the-art commercial hubs designed for businesses to thrive, blending aesthetics with functionality.",
-    },
-    {
-        title: "Luxury Apartments",
-        category: "Residential",
-        image: "/slideshow/2.jpeg",
-        description: "Modern high-rise apartments offering premium amenities and panoramic views of the city skyline.",
-    },
-    {
-        title: "Gated Community",
-        category: "Residential",
-        image: "/slideshow/5.jpeg",
-        description: "Spacious residential communities designed for families, featuring open green spaces and modern facilities.",
-    },
-    {
         title: "Club House Adarsh Greens",
         category: "Infrastructure",
         image: "/slideshow/1.jpeg",
         description: "A premium club house facility designed for community engagement and leisure at Adarsh Greens, Kogilu.",
+    },
+    {
+        title: "Adarsh Greens Swimming Pool",
+        category: "Infrastructure",
+        image: "/slideshow/14.jpeg",
+        description: "Premium swimming pool facility located near the club house, offering relaxation and recreation.",
+    },
+    {
+        title: "Adarsh Pine Court",
+        category: "Residential",
+        image: "/slideshow/2.jpeg",
+        description: "Modern high-rise apartments offering premium amenities and panoramic views, located in Chikkagubbi.",
+    },
+    {
+        title: "Residential Villa at Adarsh Pine Court",
+        category: "Residential",
+        image: "/slideshow/5.jpeg",
+        description: "Spacious residential villas designed for families, featuring open green spaces and modern facilities.",
     },
 ];
 
@@ -58,11 +59,13 @@ export default function Portfolio() {
                             viewport={{ once: true }}
                             className="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer"
                         >
-                            <div className="aspect-video w-full overflow-hidden">
-                                <img
+                            <div className="aspect-video w-full overflow-hidden relative">
+                                <Image
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity" />

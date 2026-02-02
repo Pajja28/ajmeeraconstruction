@@ -24,13 +24,13 @@ export default function Footer() {
                             Shaping Bengaluru's skyline with excellence, precision, and a commitment to quality. Trusted by families and businesses alike.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+                            <a href="https://www.facebook.com/profile.php?id=61587277895805&sk=about_details" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
                                 <Facebook size={20} />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+                            <a href="https://www.instagram.com/ajmeraaconstruction/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
                                 <Instagram size={20} />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+                            <a href="https://x.com/AjmeraCons89012" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
                                 <svg
                                     viewBox="0 0 24 24"
                                     width="20"

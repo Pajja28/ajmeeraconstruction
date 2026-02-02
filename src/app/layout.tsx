@@ -8,8 +8,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ajmeraa Construction | Bengaluru's Constructio Excellence",
-  description: "Specializing in Residential, Commercial, and Infrastructure projects with a focus on trust and transparency.",
+  title: "Ajmeraa Construction | Bengaluru's Construction Excellence",
+  description: "Leading construction company in Bengaluru specializing in premium Residential, Commercial, and Infrastructure projects. Trust, transparency, and quality guaranteed.",
+  keywords: ["Construction", "Bengaluru", "Builders", "Residential", "Commercial", "Infrastructure", "Ajmeraa", "Real Estate"],
+  openGraph: {
+    title: "Ajmeraa Construction | Building Dreams",
+    description: "Specializing in Residential, Commercial, and Infrastructure projects with a focus on trust and transparency.",
+    url: "https://ajmeraconstruction.com",
+    siteName: "Ajmeraa Construction",
+    images: [
+      {
+        url: "/images/og-image.jpg", // We might not have this, but good to have the tag structure
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  metadataBase: new URL('https://ajmeraconstruction.com'),
 };
 
 import Navbar from "@/components/Navbar";

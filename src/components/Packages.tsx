@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import { Check, ChevronDown, ChevronUp, Star } from "lucide-react";
 
 type Package = {
@@ -18,7 +20,7 @@ type Package = {
 const packages: Package[] = [
     {
         name: "Basic",
-        price: "Rs.1620/- Sq Ft",
+        price: "Rs.1900/- Sq Ft",
         color: "bg-blue-600",
         features: [
             {
@@ -145,7 +147,7 @@ const packages: Package[] = [
     },
     {
         name: "Premium",
-        price: "Rs.1830/- Sq Ft",
+        price: "Rs.2200/- Sq Ft",
         color: "bg-purple-600",
         features: [
             {
@@ -273,7 +275,7 @@ const packages: Package[] = [
     },
     {
         name: "Luxury",
-        price: "Rs.1999/- Sq Ft",
+        price: "Rs.2600/- Sq Ft",
         color: "bg-amber-500",
         popular: true,
         features: [
@@ -412,16 +414,32 @@ export default function Packages() {
     };
 
     return (
-        <section id="packages" className="py-20 bg-gray-50">
-            <div className="container px-4 md:px-6 mx-auto">
+        <section id="packages" className="py-20 bg-dark-slate relative overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/bg-packages.png"
+                    alt="Packages Background"
+                    fill
+                    className="object-cover"
+                    quality={90}
+                    priority={false}
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-dark-slate/85 via-dark-slate/70 to-dark-slate/50" />
+                {/* Top and Bottom Fades for smooth transition */}
+                <div className="absolute top-0 left-0 right-0 h-40 md:h-64 bg-gradient-to-b from-dark-slate via-dark-slate/80 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-40 md:h-64 bg-gradient-to-t from-dark-slate via-dark-slate/80 to-transparent" />
+            </div>
+
+            <div className="container relative z-10 px-4 md:px-6 mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-dark-slate mb-4">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                         Construction <span className="text-primary">Packages</span>
                     </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+                    <p className="text-gray-300 max-w-2xl mx-auto mb-8">
                         Transparent pricing with detailed scope of work. Choose the plan that fits your vision and budget.
                     </p>
-                    <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-medium">
+                    <div className="inline-flex items-center gap-2 bg-yellow-900/30 border border-yellow-700/50 text-yellow-200 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
                         <Star size={16} fill="currentColor" /> All packages include GST, Transportation, and Labor charges.
                     </div>
                 </div>
@@ -434,7 +452,7 @@ export default function Packages() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className={`bg-white rounded-2xl shadow-xl border overflow-hidden relative flex flex-col ${pkg.popular ? 'border-amber-400 ring-2 ring-amber-400/20 md:-mt-4' : 'border-gray-200'}`}
+                            className={`bg-white rounded-2xl shadow-xl border overflow-hidden relative flex flex-col h-full ${pkg.popular ? 'border-amber-400 ring-2 ring-amber-400/20' : 'border-gray-200'}`}
                         >
                             {pkg.popular && (
                                 <div className="absolute top-0 right-0 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg z-10 shadow-sm">
@@ -489,9 +507,9 @@ export default function Packages() {
                             </div>
 
                             <div className="p-6 bg-white border-t border-gray-100">
-                                <button className={`w-full py-3.5 rounded-lg font-bold text-white transition-all shadow-md active:scale-95 ${pkg.color} hover:brightness-110`}>
+                                <Link href={`?plan=${pkg.name.toLowerCase()}#contact`} className={`block w-full text-center py-3.5 rounded-lg font-bold text-white transition-all shadow-md active:scale-95 ${pkg.color} hover:brightness-110`}>
                                     Choose {pkg.name}
-                                </button>
+                                </Link>
                             </div>
                         </motion.div>
                     ))}

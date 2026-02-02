@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -37,10 +38,12 @@ export default function Slideshow() {
                     transition={{ duration: 1 }}
                     className="absolute inset-0"
                 >
-                    <img
+                    <Image
                         src={images[currentIndex]}
                         alt={`Slide ${currentIndex + 1}`}
-                        className="w-full h-full object-contain"
+                        fill
+                        className="object-contain"
+                        priority
                     />
                 </motion.div>
             </AnimatePresence>

@@ -28,7 +28,7 @@ export default function VisionPage() {
                         transition={{ duration: 0.8 }}
                         className="text-4xl md:text-5xl font-bold mb-4"
                     >
-                        Our <span className="text-secondary">Vision</span>
+                        Our <span className="text-primary">Vision</span>
                     </motion.h1>
                 </div>
             </section>

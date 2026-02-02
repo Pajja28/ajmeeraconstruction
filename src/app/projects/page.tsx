@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
 
 // Generate mock project data using the 18 images
-const categories = ["All", "Residential", "Commercial", "Infrastructure", "Industrial"];
+const categories = ["All", "Residential", "Infrastructure"];
 
 const projectsData = [
     {
@@ -15,6 +15,14 @@ const projectsData = [
         image: "/slideshow/1.jpeg",
         location: "Kogilu, Bengaluru",
         description: "A state-of-the-art community clubhouse featuring recreational amenities and modern design."
+    },
+    {
+        id: 13,
+        title: "Adarsh Greens Swimming Pool",
+        category: "Infrastructure",
+        image: "/slideshow/14.jpeg",
+        location: "Kogilu, Bengaluru",
+        description: "Premium swimming pool facility located near the club house.",
     },
     {
         id: 2,
@@ -31,6 +39,38 @@ const projectsData = [
         image: "/slideshow/3.jpeg",
         description: "Apartment Suite | Total G + 4 Floors",
         location: "Chikkagubbi, Bengaluru",
+    },
+    {
+        id: 9,
+        title: "Adarsh Pine Court",
+        category: "Residential",
+        image: "/slideshow/9.jpeg",
+        location: "Chikkagubbi, Bengaluru",
+        description: "Apartment Suite | Total G + 4 Floors",
+    },
+    {
+        id: 10,
+        title: "Adarsh Pine Court",
+        category: "Residential",
+        image: "/slideshow/10.jpeg",
+        location: "Chikkagubbi, Bengaluru",
+        description: "Apartment Suite | Total G + 4 Floors",
+    },
+    {
+        id: 11,
+        title: "Adarsh Pine Court",
+        category: "Residential",
+        image: "/slideshow/11.jpeg",
+        location: "Chikkagubbi, Bengaluru",
+        description: "Apartment Suite | Total G + 4 Floors",
+    },
+    {
+        id: 12,
+        title: "Adarsh Pine Court",
+        category: "Residential",
+        image: "/slideshow/12.jpeg",
+        location: "Chikkagubbi, Bengaluru",
+        description: "Apartment Suite | Total G + 4 Floors",
     },
     {
         id: 4,
@@ -66,34 +106,6 @@ const projectsData = [
         category: "Residential",
         image: "/slideshow/8.jpeg",
         location: "Chikkagubbi, Bengaluru",
-    },
-    {
-        id: 9,
-        title: "Industrial Warehouse",
-        category: "Industrial",
-        image: "/slideshow/9.jpeg",
-        location: "Peenya, Bengaluru",
-    },
-    {
-        id: 10,
-        title: "Skyline Towers",
-        category: "Residential",
-        image: "/slideshow/10.jpeg",
-        location: "J.P. Nagar, Bengaluru",
-    },
-    {
-        id: 11,
-        title: "Eco Park Layout",
-        category: "Infrastructure",
-        image: "/slideshow/11.jpeg",
-        location: "Devanahalli, Bengaluru",
-    },
-    {
-        id: 12,
-        title: "Modern Factory Unit",
-        category: "Industrial",
-        image: "/slideshow/12.jpeg",
-        location: "Electronic City, Bengaluru",
     }
 ];
 
