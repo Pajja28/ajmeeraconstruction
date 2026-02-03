@@ -8,15 +8,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ajmeraa Constructions Private Ltd | Bengaluru's Construction Excellence",
+  title: "Ajmeraa Constructions Pvt Ltd | Construction Excellence",
   description: "Leading construction company in Bengaluru specializing in premium Residential, Commercial, and Infrastructure projects. Trust, transparency, and quality guaranteed.",
   keywords: ["Construction", "Bengaluru", "Builders", "Residential", "Commercial", "Infrastructure", "Ajmeraa", "Real Estate"],
 
   openGraph: {
-    title: "Ajmeraa Construction | Building Dreams",
+    title: "Ajmeraa Constructions Pvt Ltd",
     description: "Specializing in Residential, Commercial, and Infrastructure projects with a focus on trust and transparency.",
     url: "https://ajmeraaconstruction.org",
-    siteName: "Ajmeraa Construction",
+    siteName: "Ajmeraa Constructions Pvt Ltd",
     images: [
       {
         url: "/images/logo.png",
