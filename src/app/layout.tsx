@@ -27,6 +27,11 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  icons: {
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
   metadataBase: new URL('https://ajmeraaconstruction.org'),
 };
 
