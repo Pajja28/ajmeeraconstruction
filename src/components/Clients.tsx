@@ -38,15 +38,17 @@ export default function Clients() {
                         We are proud to have partnered with some of the most visible and respected names in the construction and real estate sectors. Our reputation is built on their trust.
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center">
+                    <div className="flex flex-wrap justify-center gap-8">
                         {[
                             { name: "Adarsh Group", logo: "/images/client-adarsh-v3.png" },
                             { name: "Assetz", logo: "/images/client-assetz-v3.png" },
-                            { name: "SNN Estates", logo: "/images/client-snn-v3.png" }
+                            { name: "SNN Estates", logo: "/images/client-snn-v3.png" },
+                            { name: "Pacifica Companies", logo: "/images/client-pacifica.png" },
+                            { name: "Kalpataru", logo: "/images/client-kalpataru.png" }
                         ].map((client, index) => (
                             <div
                                 key={index}
-                                className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-xl hover:bg-white/10 transition-all duration-300 group cursor-pointer h-48 flex items-center justify-center"
+                                className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-xl hover:bg-white/10 transition-all duration-300 group cursor-pointer h-48 flex items-center justify-center w-full md:w-[30%]"
                             >
                                 <div className="relative w-full h-32 opacity-80 group-hover:opacity-100 transition-opacity mix-blend-screen">
                                     <Image

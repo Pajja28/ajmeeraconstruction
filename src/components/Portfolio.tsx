@@ -31,6 +31,18 @@ const projects = [
         image: "/slideshow/5.jpeg",
         description: "Spacious residential villas designed for families, featuring open green spaces and modern facilities.",
     },
+    {
+        title: "Prestige Water Ford",
+        category: "Residential",
+        image: "/projects/prestige-water-ford.jpg",
+        description: "Premium residential project located at Whitefield, Bangalore.",
+    },
+    {
+        title: "Pacifica Hotel and Residence",
+        category: "Residential",
+        image: "/projects/pacifica-hotel-residence.jpg",
+        description: "Premium hotel and residence project located at Silk Board Junction, Bangalore.",
+    },
 ];
 
 export default function Portfolio() {

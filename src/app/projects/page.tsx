@@ -106,6 +106,30 @@ const projectsData = [
         category: "Residential",
         image: "/slideshow/8.jpeg",
         location: "Chikkagubbi, Bengaluru",
+    },
+    {
+        id: 14,
+        title: "Prestige Water Ford",
+        category: "Residential",
+        image: "/projects/prestige-water-ford.jpg",
+        location: "Whitefield, Bangalore",
+        description: "Premium residential project located at Whitefield, Bangalore."
+    },
+    {
+        id: 15,
+        title: "Pacifica Hotel and Residence",
+        category: "Residential",
+        image: "/projects/pacifica-hotel-residence.jpg",
+        location: "Silk Board Junction, Bangalore",
+        description: "Premium hotel and residence project located at Silk Board Junction, Bangalore."
+    },
+    {
+        id: 16,
+        title: "Pacifica Hotel and Residence",
+        category: "Residential",
+        image: "/projects/pacifica-hotel-residence-2.png",
+        location: "Silk Board Junction, Bangalore",
+        description: "Premium hotel and residence project located at Silk Board Junction, Bangalore."
     }
 ];
 
