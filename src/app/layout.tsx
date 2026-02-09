@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     apple: "/images/logo.png",
   },
   metadataBase: new URL('https://ajmeraaconstruction.org'),
+  alternates: {
+    canonical: './',
+  },
 };
 
 import Navbar from "@/components/Navbar";
